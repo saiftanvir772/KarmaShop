@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="64d29f65-f19a-44fd-8e60-a4c2a6d779dc">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="138"/>
+	<property name="ireport.y" value="79"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     product.`pro_id` AS product_pro_id,
+     product.`cat_name` AS product_cat_name,
+     product.`sub_cat_name` AS product_sub_cat_name,
+     product.`pro_name` AS product_pro_name,
+     product.`pro_qty` AS product_pro_qty,
+     product.`pro_price` AS product_pro_price,
+     product.`pro_img` AS product_pro_img,
+     product.`pro_brand` AS product_pro_brand
+FROM
+     `product` product]]>
+	</queryString>
+	<field name="product_pro_id" class="java.lang.Integer"/>
+	<field name="product_cat_name" class="java.lang.String"/>
+	<field name="product_sub_cat_name" class="java.lang.String"/>
+	<field name="product_pro_name" class="java.lang.String"/>
+	<field name="product_pro_qty" class="java.lang.Integer"/>
+	<field name="product_pro_price" class="java.lang.Integer"/>
+	<field name="product_pro_img" class="java.lang.String"/>
+	<field name="product_pro_brand" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="60" height="20" uuid="c8354e70-3f09-40c9-8fb0-69b8e2ffa5c8"/>
+				<text><![CDATA[product_pro_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="1" width="74" height="20" uuid="cc59def1-2efc-4b8e-af88-4b4981c333b3"/>
+				<text><![CDATA[product_cat_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="1" width="69" height="20" uuid="722cea78-f28c-4d8e-a4ee-9d9aa692942a"/>
+				<text><![CDATA[product_sub_cat_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="1" width="67" height="20" uuid="303f556b-4f28-40e1-a622-90e7a92baa44"/>
+				<text><![CDATA[product_pro_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="1" width="77" height="20" uuid="2058eebb-0b7e-4c52-b2b1-e2436c9112a3"/>
+				<text><![CDATA[product_pro_qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="1" width="71" height="20" uuid="6961fa2d-3d30-42bb-ba57-b2c9fca0f7b0"/>
+				<text><![CDATA[product_pro_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="1" width="56" height="20" uuid="fcea0785-77a6-46e8-ad95-90cbd284ade8"/>
+				<text><![CDATA[product_pro_brand]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="60" height="20" uuid="85f46ab4-07a1-484c-a6c2-cda83a3b3d0a"/>
+				<textFieldExpression><![CDATA[$F{product_pro_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="0" width="74" height="20" uuid="80cedd54-856c-4652-875c-b67331b9fba1"/>
+				<textFieldExpression><![CDATA[$F{product_cat_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="0" width="69" height="20" uuid="b8cb364c-4999-4bd2-ab32-df41ee98efa7"/>
+				<textFieldExpression><![CDATA[$F{product_sub_cat_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="67" height="20" uuid="ce475f9d-2804-4df0-a4b7-f0e2c0b7ca0b"/>
+				<textFieldExpression><![CDATA[$F{product_pro_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="0" width="77" height="20" uuid="de06e734-5267-454b-8e3d-0fcf8fd875c5"/>
+				<textFieldExpression><![CDATA[$F{product_pro_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="0" width="71" height="20" uuid="efcd5231-cb1c-4c29-b38f-11a6141ac9ce"/>
+				<textFieldExpression><![CDATA[$F{product_pro_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="499" y="0" width="56" height="20" uuid="4d4adb52-e6b4-413b-8227-3793fec487eb"/>
+				<textFieldExpression><![CDATA[$F{product_pro_brand}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

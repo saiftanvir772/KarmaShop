@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 16, 2019 12:33:10 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.Cart" table="cart" catalog="kenakata" optimistic-lock="version">
+        <id name="cartId" type="int">
+            <column name="cart_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="proId" type="java.lang.Integer">
+            <column name="pro_id" />
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+        </property>
+        <property name="orderDate" type="timestamp">
+            <column name="order_date" length="26" />
+        </property>
+        <property name="orderQty" type="java.lang.Integer">
+            <column name="order_qty" />
+        </property>
+        <property name="totalPrice" type="java.lang.Integer">
+            <column name="total_price" />
+        </property>
+    </class>
+</hibernate-mapping>

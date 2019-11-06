@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 16, 2019 12:33:10 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.Order" table="order" catalog="kenakata" optimistic-lock="version">
+        <id name="orderId" type="java.lang.Integer">
+            <column name="order_id" />
+            <generator class="identity" />
+        </id>
+        <property name="proId" type="java.lang.Integer">
+            <column name="pro_id" />
+        </property>
+        <property name="proName" type="string">
+            <column name="pro_name" length="45" />
+        </property>
+        <property name="proQty" type="java.lang.Integer">
+            <column name="pro_qty" />
+        </property>
+        <property name="totalPrice" type="java.lang.Integer">
+            <column name="total_price" />
+        </property>
+    </class>
+</hibernate-mapping>
